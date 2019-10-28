@@ -4,6 +4,7 @@ const target = [
   [ "은", "는" ],
   [ "이", "가" ],
   [ "을", "를" ],
+  [ "와", "과" ],
 ];
 
 export default function enyg(str) {
