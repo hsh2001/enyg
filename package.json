@@ -1,0 +1,25 @@
+{
+  "name": "enyg",
+  "version": "0.0.1",
+  "description": "ENYG.js",
+  "main": "dist/enyg.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsh2001/enyg.js.git"
+  },
+  "keywords": [
+    "korean"
+  ],
+  "author": "hsh2001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsh2001/enyg.js/issues"
+  },
+  "homepage": "https://github.com/hsh2001/enyg.js#readme"
+}

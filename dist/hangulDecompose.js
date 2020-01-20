@@ -25,7 +25,7 @@ const getCharCode = s => String(s).charCodeAt();
 /**
 *  @param {String} char 길이가 1인 문자열
 */
-export default function hangulDecompose(char) {
+module.exports = function hangulDecompose(char) {
   let [onset, nucleus, coda,] = Array(3).fill("");
   const charCode = getCharCode(char);
 

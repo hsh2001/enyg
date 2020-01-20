@@ -1,4 +1,4 @@
-import hangulDecompose from './hangulDecompose.js';
+const hangulDecompose = require('./hangulDecompose.js');
 
 const target = [
   [ "은", "는" ],
@@ -7,7 +7,7 @@ const target = [
   [ "과", "와" ],
 ];
 
-export default function enyg(str) {
+module.exports = function enyg(str) {
   target.forEach(selector => {
     const query = `[${selector.join('|')}]`;
     while (str.includes(query)) {
@@ -20,4 +20,4 @@ export default function enyg(str) {
     }
   });
   return str;
-}
+};
