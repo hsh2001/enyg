@@ -1,29 +1,32 @@
-# ENYG.js
+# enyg.js
 은는이가.js
 
+## Setup
+```bash
+npm i enyg
+```
+
+## Import
 ```javascript
-import enyg from './core/enyg.js';
+import enyg from 'enyg';
+//또는
+const enyg = require('enyg');
 ```
 
-```
-string enyg(string);
-```
-\[은|는\], \[이|가\] 등의 조사를 문법에 맞게 선택해줍니다.
+## Functions
+`string enyg(string)`: \[은|는\], \[이|가\] 등의 조사를 문법에 맞게 선택해줍니다.
 
-예:
-```javascript
-enyg("그것[은|는] 왜") === "그것은 왜";
-enyg("너[이|가] 나[을|를]?") === "너가 나를?";
-```
+  예:
+  ```javascript
+  enyg("그것[은|는] 왜") === "그것은 왜";
+  enyg("너[이|가] 나[을|를]?") === "너가 나를?";
+  ```
 
-다음의 조사들이 문법에 맞게 대체됩니다.
-- `[은|는]`
-- `[이|가]`
-- `[을|를]`
-- `[와|과]`
-
-# 지원
-ES2017~
+  다음의 조사들이 문법에 맞게 대체됩니다.
+  - `[은|는]`
+  - `[이|가]`
+  - `[을|를]`
+  - `[와|과]`
 
 # 라이센스
 MIT
