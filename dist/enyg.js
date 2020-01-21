@@ -13,7 +13,7 @@ module.exports = function enyg(str) {
     while (str.includes(query)) {
       const prevCharIndex = str.indexOf(query) - 1;
       const prevChar = str[prevCharIndex] || "";
-      const result = hangulDecompose(prevChar).coda
+      const result = hangulDecompose(prevChar).jongsung
                      ? selector[0]
                      : selector[1];
       str = str.replace(query, result);
