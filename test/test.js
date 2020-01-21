@@ -1,8 +1,8 @@
 // import hangulDecompose from '../core/hangulDecompose.js';
 // import enyg from '../enyg.js';
 
-const hangulDecompose = require('../dist/hangulDecompose.js');
 const enyg = require('../dist/enyg.js');
+const { hangulDecompose } = enyg;
 
 console.log(
   enyg(
@@ -13,4 +13,6 @@ console.log(
 Array
 .from("가나다핳헿쀍뾹뀱ㅔㅋ")
 .map(hangulDecompose)
-.forEach(o => console.log(o));
+.forEach(
+  o => console.log(o)
+);

@@ -7,7 +7,7 @@ const target = [
   [ "과", "와" ],
 ];
 
-module.exports = function enyg(str) {
+function enyg(str) {
   target.forEach(selector => {
     const query = `[${selector.join('|')}]`;
     while (str.includes(query)) {
@@ -21,3 +21,6 @@ module.exports = function enyg(str) {
   });
   return str;
 };
+
+enyg.hangulDecompose = hangulDecompose;
+module.exports = enyg;
