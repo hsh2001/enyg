@@ -3,6 +3,7 @@
 const enyg = require('../index.js');
 const {
   hangulDecompose,
+  toChosung,
 } = enyg;
 
 console.log(
@@ -17,3 +18,11 @@ Array
 .forEach(
   o => console.log(o)
 );
+
+[
+  "가을",
+  "하늘",
+].map(toChosung)
+.forEach(
+  o => console.log(o)
+)
