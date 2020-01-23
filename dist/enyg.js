@@ -22,5 +22,4 @@ function enyg(str) {
   return str;
 };
 
-enyg.hangulDecompose = hangulDecompose;
 module.exports = enyg;

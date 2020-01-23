@@ -1,8 +1,9 @@
-// import hangulDecompose from '../core/hangulDecompose.js';
-// import enyg from '../enyg.js';
+// import enyg, { hangulDecompose } from '../index.js';
 
-const enyg = require('../dist/enyg.js');
-const { hangulDecompose } = enyg;
+const enyg = require('../index.js');
+const {
+  hangulDecompose,
+} = enyg;
 
 console.log(
   enyg(

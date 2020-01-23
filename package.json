@@ -2,7 +2,7 @@
   "name": "enyg",
   "version": "0.1.0",
   "description": "ENYG.js",
-  "main": "dist/enyg.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
