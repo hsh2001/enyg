@@ -7,6 +7,10 @@ const target = [
   ['과', '와'],
 ];
 
+/**
+ * @param {string} str 변환을 위한 문자열
+ * @return {string}
+ */
 function enyg(str) {
   target.forEach((selector) => {
     const query = `[${selector.join('|')}]`;

@@ -12,7 +12,16 @@ const hangulSyllable = {
 const getCharCode = (s) => String(s).charCodeAt();
 
 /**
- *  @param {String} char 길이가 1인 문자열
+ * @typedef DecomposedHangul
+ * @property {string} char
+ * @property {string | undefined} chosung
+ * @property {string | undefined} jungsung
+ * @property {string | undefined} jongsung
+ */
+
+/**
+ * @param {string} char 길이가 1인 문자열
+ * @returns {DecomposedHangul}
  */
 module.exports = function hangulDecompose(char) {
   let [chosung, jungsung, jongsung] = Array(3).fill('');

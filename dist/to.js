@@ -21,14 +21,29 @@ function _mapToElementWithCache(string, type) {
   return _useCache(type, string, () => _mapToElement(string, type));
 }
 
+/**
+ *
+ * @param {string} string
+ * @returns {string}
+ */
 function toChosung(string) {
   return _mapToElementWithCache(string, 'chosung');
 }
 
+/**
+ *
+ * @param {string} string
+ * @returns {string}
+ */
 function toJungsung(string) {
   return _mapToElementWithCache(string, 'jungsung');
 }
 
+/**
+ *
+ * @param {string} string
+ * @returns {string}
+ */
 function toJongsung(string) {
   return _mapToElementWithCache(string, 'jongsung');
 }
