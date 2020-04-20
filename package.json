@@ -1,8 +1,8 @@
 {
   "name": "enyg",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "ENYG.js",
-  "main": "index.js",
+  "main": "build/index.js",
   "directories": {
     "test": "test"
   },
