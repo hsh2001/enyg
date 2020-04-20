@@ -1,0 +1,7 @@
+.git/**
+.gitignore
+.eslintrc.js
+.prettierrc.js
+
+src/**
+test/**

@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npx jest"
+    "test": "npx jest",
+    "build": "npx tsc",
+    "dev": "npx tsc -w",
+    "cowsay": "npx cowsay \"은는이가.js\" --no-install"
   },
   "repository": {
     "type": "git",
@@ -24,8 +27,15 @@
   "homepage": "https://github.com/hsh2001/enyg.js#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.28.0",
+    "@typescript-eslint/parser": "^2.28.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
     "jest": "^25.4.0",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.4.0"
+  },
+  "dependencies": {
+    "typescript": "^3.8.3"
   }
 }
