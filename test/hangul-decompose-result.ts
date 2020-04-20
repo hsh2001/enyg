@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     char: '가',
     chosung: 'ㄱ',
@@ -53,4 +53,4 @@ module.exports = [
   {
     char: 'ㅋ',
   },
-];
+] as const;

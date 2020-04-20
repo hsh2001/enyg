@@ -1,17 +1,13 @@
-const hangulDecompose = require('./hangulDecompose.js');
+import hangulDecompose from './hangulDecompose';
 
 const target = [
   ['은', '는'],
   ['이', '가'],
   ['을', '를'],
   ['과', '와'],
-];
+] as const;
 
-/**
- * @param {string} str 변환을 위한 문자열
- * @return {string}
- */
-function enyg(str) {
+function enyg(str: string): string {
   target.forEach((selector) => {
     const query = `[${selector.join('|')}]`;
     while (str.includes(query)) {
@@ -26,4 +22,4 @@ function enyg(str) {
   return str;
 }
 
-module.exports = enyg;
+export default enyg;

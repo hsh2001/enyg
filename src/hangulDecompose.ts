@@ -7,24 +7,23 @@ const hangulSyllable = {
   chosung: [...'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'],
   jungsung: [...'ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ'],
   jongsung: ['', ...'ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ'],
-};
+} as const;
 
-const getCharCode = (s) => String(s).charCodeAt();
+function getCharCode(s: string): number {
+  return String(s).charCodeAt(0);
+}
 
-/**
- * @typedef DecomposedHangul
- * @property {string} char
- * @property {string | undefined} chosung
- * @property {string | undefined} jungsung
- * @property {string | undefined} jongsung
- */
+interface DecomposedHangul {
+  char: string;
+  chosung?: string;
+  jungsung?: string;
+  jongsung?: string;
+}
 
-/**
- * @param {string} char 길이가 1인 문자열
- * @returns {DecomposedHangul}
- */
-module.exports = function hangulDecompose(char) {
-  let [chosung, jungsung, jongsung] = Array(3).fill('');
+export default function hangulDecompose(char: string): DecomposedHangul {
+  let chosung: string | void;
+  let jungsung: string | void;
+  let jongsung: string | void;
   const charCode = getCharCode(char);
 
   if (getCharCode('가') <= charCode && charCode <= getCharCode('힣')) {
@@ -46,4 +45,4 @@ module.exports = function hangulDecompose(char) {
     jungsung,
     jongsung,
   };
-};
+}

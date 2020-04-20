@@ -1,8 +1,5 @@
-// import enyg, { hangulDecompose } from '../index';
-
-const enyg = require('../index.js');
-const { hangulDecompose, toChosung } = enyg;
-const testExpectResult = require('./hangul-decompose-result');
+import enyg, { hangulDecompose, toChosung } from '../index';
+import testExpectResult from './hangul-decompose-result';
 
 describe('은는이가.js 테스트', () => {
   test('조사 선택', () => {
